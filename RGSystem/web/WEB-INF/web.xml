@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"><context-param>
+        <param-name>jdbcClassname</param-name>
+        <param-value>com.mysql.jdbc.Driver</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUsername</param-name>
+        <param-value>etramsne_ustlib</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value>ustlib890</param-value>
+    </context-param>
+    <context-param>
+        <param-name>jdbcDriverURL</param-name>
+        <param-value>jdbc:mysql://etrams.net:3306/etramsne_reportdb</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>Add</servlet-name>
+        <servlet-class>classes.servlets.Add</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Add</servlet-name>
+        <url-pattern>/Add</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Upload</servlet-name>
+        <servlet-class>classes.servlets.Upload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Upload</servlet-name>
+        <url-pattern>/Upload</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Revise</servlet-name>
+        <servlet-class>classes.servlets.Revise</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Revise</servlet-name>
+        <url-pattern>/Revise</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Change</servlet-name>
+        <servlet-class>classes.servlets.Change</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Change</servlet-name>
+        <url-pattern>/Change</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Download</servlet-name>
+        <servlet-class>classes.servlets.Download</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Download</servlet-name>
+        <url-pattern>/Download</url-pattern>      
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>View_Main</servlet-name>
+        <servlet-class>classes.servlets.View_Main</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>View_Main</servlet-name>
+        <url-pattern>/View_Main</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>View_Add</servlet-name>
+        <servlet-class>classes.servlets.View_Add</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>View_Add</servlet-name>
+        <url-pattern>/View_Add</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>classes.servlets.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>classes.servlets.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Generate</servlet-name>
+        <servlet-class>classes.servlets.Generate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Generate</servlet-name>
+        <url-pattern>/Generate</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Delete</servlet-name>
+        <servlet-class>classes.servlets.Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Delete</servlet-name>
+        <url-pattern>/Delete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Update</servlet-name>
+        <servlet-class>classes.servlets.Update</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Update</servlet-name>
+        <url-pattern>/Update</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>

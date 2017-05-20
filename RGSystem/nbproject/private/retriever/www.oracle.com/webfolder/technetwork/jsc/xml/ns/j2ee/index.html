@@ -1,0 +1,410 @@
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang='en'>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Java 2 Platform, Enterprise Edition (J2EE) : XML Schemas for J2EE Deployment Descriptors</title>
+<meta http-equiv="content-language" content="en">
+<meta name="collection" content="reference">
+<meta name="keywords" content="XML, Schema, Deployment, Descriptors, J2EE, J2EE, 1.4">
+<meta name="description" content="This document spells out the document formats that will be used by the Java 2 Platform, Enterprise Edition (J2EE) deployment descriptors that are detailed in the J2EE 1.4 specifications.">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="archive" content="false">
+<meta name="archive" content="FALSE">
+<meta name="date" content="2003-04-30">
+<link rel="stylesheet" href="/css/default_developer.css" />
+
+
+<script type="text/javascript" language="JavaScript" src="/js/popUp.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/sniff.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/menucontent.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/menucode.js"></script>
+<script language="javascript1.2" type="text/javascript" src="/js/developer.js"></script>
+
+
+</head>
+<!--stopindex-->
+<body leftmargin="0" topmargin="0" marginheight="0" marginwidth="0" rightmargin="0" bgcolor="#ffffff" onload="prepmenus(); done=true">
+<a name="top"></a>
+<!-- BEGIN GENERIC MASTHEAD -->
+
+
+<!-- BEGIN A1 COMPONENT V.0 -->
+<div class="a1 a1r2">
+<div class="a1v0">
+<a href="#skip2content" class="skiplink">Skip to Content</a>
+<span class="toolbarlinks">
+<a href="/global/mh/suncom/index.html">Sun</a>
+<a href="/global/mh/java/">Java</a>
+<a href="/global/mh/solaris/">Solaris</a>
+<a href="/global/mh/communities/" class="dividelink">Communities</a>
+<a href="http://developers.sun.com/global/my_profile.html">My SDN Account</a>
+
+</span>
+</div>
+</div>
+<!-- END A1 COMPONENT V.0 -->
+
+<!-- BEGIN A2 COMPONENT V.1 -->
+<div class="a2w0">
+<div class="a2" id="a2v1">
+<div class="a2w1"><div class="a2w2"><div class="a2w3"><div class="a2w4">
+<div class="a2topiclinks">
+<div class="a2search">
+<form action="http://search.sun.com/main/index.jsp" accept-charset="utf-8" method="GET">
+<input type="hidden" name="charset" value="utf-8">
+<input type="hidden" name="col" value="main-developer-all">
+<span class="rightarrowwhite">&raquo;</span>&nbsp;<a href="http://developers.sun.com/global/search_tips.html">search tips</a>&nbsp;
+<input class="searchfield" name="qt" class="medium" size="7" onFocus="if( this.value==this.defaultValue ) this.value='';" value="Search">
+<input id="searchbttn" type="image" border="0" src="/im/a2_bttn_search.gif" alt="Submit Search">
+</form>
+</div>
+<a href="http://www.sun.com" title="Home Page" id="sunlogo"><img src="/im/a.gif" alt="Home Page" width="98" height="58" border="0" /></a>
+<a href="http://developers.sun.com" title="Sun Developer Network"><img src="/im/a.gif" id="venuespacer" alt="Sun Developer Network" width="400" height="33" border="0" /></a>
+<ul id="mtopics">
+<li id="mtopic1"><a id="glink1" class="tpclink a2menu" title="See All APIs" href="/global/mh/api/index.html">APIs</a></li>
+<li id="mtopic2"><a id="glink2" class="tpclink a2menu" title="See All Downloads" href="/global/mh/downloads/index.html">Downloads</a></li>
+<li id="mtopic3"><a id="glink3" class="tpclink a2menu" title="See All Products" href="/global/mh/products/index.html">Products</a></li>
+<li id="mtopic4"><a id="glink4" class="tpclink a2menu" title="See All Support" href="/global/mh/support/index.html">Support</a></li>
+<li id="mtopic5"><a id="glink5" class="tpclink a2menu" title="See All Training" href="/global/mh/training/index.html">Training</a></li>
+<li id="mtopic6"><a id="glink6" class="tpclink a2menu" title="See All Participate" href="/global/mh/participate/index.html">Participate</a></li>
+</ul>
+</div>
+</div></div></div></div>
+</div></div>
+<!-- END A2 COMPONENT V.1 -->
+
+
+
+<!-- END GENERIC MASTHEAD -->
+<!-- BEGIN BREADCRUMB -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="vatop">
+<tr>
+<td>      
+<div class="breadcrumb">
+<a href="http://developers.sun.com/">SDN Home</a>
+ &gt; <a href="http://developers.sun.com/prodtech/index.html">Products & Technologies</a> &gt; <a href="http://java.sun.com/index.jsp">Java Technology</a> &gt; <a href="http://java.sun.com/xml/index.jsp">XML</a> &gt; <a href="http://java.sun.com/xml/reference/docs/index.html">Reference</a> &gt; <a href="http://java.sun.com/xml/reference/docs/index.html">Documentation</a> &gt;
+</div>
+</td>
+<td align="right" nowrap="nowrap"><div class="breadcrumb">
+</div></td></tr>
+<tr><td colspan="2"><img src="/im/a.gif" width="770" height="1" border="0" alt=" " /></td></tr>
+</table>
+<span class="sp5">&nbsp;</span><br />     
+<!-- END BREADCRUMB -->
+<!-- BEGIN PAGETITLE -->
+<div class="pagetitle2">Article</div>
+<div class="smallpagetitle"><h1>Java 2 Platform, Enterprise Edition (J2EE) : XML Schemas for J2EE Deployment Descriptors</h1></div>
+<!-- END PAGETITLE -->
+<!-- BEGIN WRAPPER TABLE, 2 COLUMN, MAIN/RIGHT -->
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<tr><td width="100%" valign="top">
+<!-- BEGIN CENTRAL COLUMN COMPONENTS -->
+<!--startindex-->
+<!-- ============ -->
+<!-- MAIN CONTENT -->
+<!-- ============ -->
+<a name="skip2content"></a>
+<!--  BEGIN VCD4 PFV  -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="smaller" valign="top"><em></em></td>
+<td width="10">&nbsp;</td>
+<td align="right" valign="bottom"><div class="sitelinks" style="padding:0px;">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td valign="bottom" align="right">&nbsp;</td>
+<td valign="bottom" class="smaller" nowrap="nowrap"><a href="/jsp_utils/PrintPage.jsp" target="printFriendlyView" onclick="openPopup('','printFriendlyView',710,650,'no',1,1,0,0,0,0); return true;"><img src="/im/ic_print.gif" width="14" height="12" alt="Print-friendly Version" border="0" hspace="4" />Print-friendly Version</a><br></td>
+</tr></table></div>
+</td></tr>
+</table>
+<!--  END VCD4 PFV -->
+<!-- page headline --><span class="body">
+<p>This Version: <a href="index.html">November 24, 2003</a>
+</p>
+<p>Latest Version: <a href="/xml/ns/j2ee/">http://java.sun.com/xml/ns/j2ee/</a></p>
+<p>Editors:</p>
+<ul>
+<li>
+<a href="mailto:bill.shannon@sun.com">Bill Shannon</a>, <a
+href="/j2ee/index.jsp">J2EE</a> Spec Lead, Sun Microsystems, Inc.</li>
+</ul>
+<!-- BEGIN FRAGMENT | HR TAG -->
+<div class="contentdivider">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"
+class="grey4">
+<tbody>
+<tr>
+<td><img src="/im/a.gif" width="1" height="4" border="0" alt=" "></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- END FRAGMENT | HR TAG -->
+<!-- end page headline --><!-- main page content -->
+<h3>Table of contents</h3>
+<ol>
+<li><a href="#intro">Introduction</a></li>
+<li><a href="#usage">Using J2EE Schemas</a></li>
+<li><a href="#resources">J2EE 1.4 Schema Resources</a></li>
+<li><a href="#oldresources">J2EE DTDs</a></li>
+</ol>
+<a name="intro"></a>
+<p><b>1. Introduction</b></p>
+<p>This document lists the document formats that will be used by the
+Java 2 Platform, Enterprise Edition
+(J2EE) deployment descriptors
+described by J2EE 1.4 and later specifications. Prior to the J2EE 1.4
+specifications,
+each Deployment Descriptor must be valid with respect to a specific DTD
+that describes the Deployment Descriptor. They are found in the
+<a href="#oldresources">J2EE section</a> of this document. Starting
+with
+the J2EE 1.4 specification, each specification requires its Deployment
+Descriptor be validated with respect to an XML Schema that is listed by
+this document. Note that deployment descriptors defined by previous
+versions of the J2EE specification must also be supported, and must
+continue to be validated against the corresponding DTD.
+</p>
+<p>
+This document describes how to use the J2EE schemas that are described
+as a set of modules and provides a list of XML Schemas for each
+deployment descriptor.
+</p>
+<a name="usage"></a>
+<p><b>2. Using J2EE Schemas</b></p>
+<p>All J2EE Deployment Descriptor Schemas share the namespace,
+<a href="/xml/ns/j2ee/">http://java.sun.com/xml/ns/j2ee/</a>. Each
+schema
+document contains a version attribute that contains the version of the
+specification. For example, the XML Schema document for the Servlet
+specification contains the version attribute value "2.4", pertaining to
+the specific version of the specification as well as the schema
+document itself.
+</p>
+<p>
+Each J2EE XML Schema document's file name contains the specific version
+of the related specification. This is introduced for convenience to
+locate specific versions of the schema documents. However, Deployment
+Descriptor instances are not required to refer to a specific file.
+Instead, an instance must specify the version of the corresponding
+specification by using a version attribute. For example, connector
+Deployment Descriptor instances that must be processed with the
+Connector
+1.5 version must indicate the version within the version attribute of
+the instance document, for example, "1.5". The Deployment Descriptor
+processors use the version information to choose the appropriate
+version of the schema document(s) to process the Deployment Descriptor
+instances.
+</p>
+<p>
+A specific version of the J2EE specification contains a set of
+deployment descriptor schemas that constitute the J2EE Schema. The common
+definitions are contained in the <code>j2ee_&lt;version&gt;.xsd</code>
+document that may be included by several J2EE Deployment Descriptor
+schemas.
+</p>
+<a name="resources"></a>
+<p><b>3. J2EE 1.4 Schema Resources</b></p>
+<p>This table contains the XML Schema components for J2EE 1.4 schema.</p>
+</span>
+<p>
+<table width="100%" border="1" cellpadding="3">
+<tbody>
+<tr>
+<th><span class="body">Date Published</span></th>
+<th><span class="body">File Name</span></th>
+<th><span class="body">Description</span></th>
+<th><span class="body">Status</span></th>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a
+href="/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">web-jsptaglibrary_2_0.xsd</a></span></td>
+<td><span class="body">JSP Taglibrary Deployment Descriptor Schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a href="/xml/ns/j2ee/ejb-jar_2_1.xsd">ejb-jar_2_1.xsd</a></span></td>
+<td><span class="body">Enterprise JavaBeans Deployment Descriptor
+Schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a href="/xml/ns/j2ee/connector_1_5.xsd">connector_1_5.xsd</a></span></td>
+<td><span class="body">Connector Deployment Descriptor Schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">February, 2004</span></td>
+<td><span class="body"><a href="/xml/ns/j2ee/web-app_2_4.xsd">web-app_2_4.xsd</a></span></td>
+<td><span class="body">Servlet Deployment Descriptor Schema</span></td>
+<td><span class="body">Maintenance Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a href="/xml/ns/j2ee/jsp_2_0.xsd">jsp_2_0.xsd</a></span></td>
+<td><span class="body">JavaServer Pages Deployment Descriptor
+Schema</span></td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a href="/xml/ns/j2ee/j2ee_1_4.xsd">j2ee_1_4.xsd</a></span></td>
+<td><span class="body">J2EE 1.4 definitions file that
+contains common schema components</span>
+</td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a
+href="/xml/ns/j2ee/application-client_1_4.xsd">application-client_1_4.xsd</a></span></td>
+<td><span class="body">Application Client schema</span>
+</td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<td><span class="body"><a href="/xml/ns/j2ee/application_1_4.xsd">application_1_4.xsd</a></span></td>
+<td><span class="body">Application schema</span>
+</td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<!--
+<td><span class="body"><a
+href="http://www.ibm.com/webservices/xsd/j2ee_web_services_1_1.xsd">http://www.ibm.com/webservices/xsd/
+j2ee_web_services_1_1.xsd</a></span></td>
+-->
+<td><span class="body"><a
+href="j2ee_web_services_1_1.xsd">http://www.ibm.com/webservices/xsd/
+j2ee_web_services_1_1.xsd</a></span></td>
+<td><span class="body">Web services schema</span>
+</td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<!--
+<td><span class="body"><a
+href="http://www.ibm.com/webservices/xsd/j2ee_web_services_client_1_1.xsd">http://www.ibm.com/webservices/xsd/
+j2ee_web_services_client_1_1.xsd</a></span></td>
+-->
+<td><span class="body"><a
+href="j2ee_web_services_client_1_1.xsd">http://www.ibm.com/webservices/xsd/
+j2ee_web_services_client_1_1.xsd</a></span></td>
+<td><span class="body">Web services client schema</span>
+</td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">November 24, 2003</span></td>
+<!--
+<td><span class="body"><a
+href="http://www.ibm.com/webservices/xsd/j2ee_jaxrpc_mapping_1_1.xsd">http://www.ibm.com/webservices/xsd/
+j2ee_jaxrpc_mapping_1_1.xsd</a></span></td>
+-->
+<td><span class="body"><a
+href="j2ee_jaxrpc_mapping_1_1.xsd">http://www.ibm.com/webservices/xsd/
+j2ee_jaxrpc_mapping_1_1.xsd</a></span></td>
+<td><span class="body">JAX-RPC mapping schema</span>
+</td>
+<td><span class="body">Final Release</span></td>
+</tr>
+<tr>
+<td><span class="body">-</span></td>
+<td><span class="body"><a href="http://www.w3.org/2001/xml.xsd">http://www.w3.org/2001/xml.xsd</a></span></td>
+<td><span class="body">The J2EE schemas use some
+common definitions provided and published by W3C</span>
+</td>
+<td><span class="body">-</span></td>
+</tr>
+</tbody>
+</table>
+<span class="body">
+<a name="oldresources"></a>
+<p></p>
+<p><b>4. J2EE DTDs</b></p>
+<p>DTDs specified by previous versions of the J2EE specification are
+available at <a href="/dtd/">http://java.sun.com/dtd/</a>.</p>
+</span>
+<!-- end main page content --></p>
+<!-- =================== -->
+<!-- END OF MAIN CONTENT -->
+<!-- =================== -->
+<!--stopindex-->
+<!-- END CENTRAL COLUMN COMPONENTS -->
+</td><td valign="top">
+<!-- BEGIN RIGHT COLUMN COMPONENTS -->
+<!-- END RIGHT COLUMN COMPONENTS -->
+</td></tr>
+<!-- BEGIN SPACER ROW -->
+<tr><td><img src="/im/a.gif" width="560" height="1" border="0" alt=" " /></td><td><img src="/im/a.gif" width="170" height="1" border="0" alt=" " /></td></tr>
+<!-- END SPACER ROW -->
+</table>
+<!-- END WRAPPER TABLE, 2 COLUMN, MAIN/RIGHT -->
+<!-- BEGIN PC1 COMPONENT V.2 -->
+<div class="pc1 pc1v2" style="margin:0 10px">
+<div class="pc1w1"><div class="pc1w2"><div class="pc1w3 cornerBL"><div class="pc1w4">
+<p>Oracle is reviewing the Sun product roadmap and will provide guidance to customers in accordance with Oracle's standard product communication policies. Any resulting features and timing of release of such features as determined by Oracle's review of roadmaps, are at the sole discretion of Oracle. All product roadmap information, whether communicated by Sun Microsystems or by Oracle, does not represent a commitment to deliver any material, code, or functionality, and should not be relied upon in making purchasing decisions. It is intended for information purposes only, and may not be incorporated into any contract.</p>
+</div></div></div></div>
+</div>
+<!-- END PC1 COMPONENT V.2 -->
+<!-- BEGIN G9 VARIATION 0 -->
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/js/op/oo_engine.js"></script>
+<script language="javascript" type="text/javascript" charset="UTF-8" src="/js/op/oo_conf_en-US.js"></script>
+<!-- END G9 VARIATION 0 -->
+<!-- BEGIN VNV5 FOOTER  -->
+<table border="0" cellpadding="0" cellspacing="10" width="100%">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%" class="vatop">
+<tr>
+<td colspan="4" valign="top" class="grey3"><img src="/im/a.gif" width="1" height="2" border="0" alt="" /></td></tr>
+<tr>
+<td><img src="http://developers.sun.com/im/a.gif" width="190" height="1" border="0" alt="" /><br />
+<a href="http://www.oracle.com/index.html"><img src="/im/logo_oracle_footer.gif" width="93" height="29" border="0" alt="" vspace="5"/></a></td>
+<td width="100%" valign="top"><img src="/im/a.gif" width="350" height="1" border="0" alt="" /><br />
+<div class="footer">
+<a href="http://developers.sun.com/global/aboutsun.html">About Sun</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/aboutsdn.html">About This Site</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/newsletters.html">Newsletters</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/contact.html">Contact Us</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/employment.html">Employment</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/howtobuy.html">How to Buy</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/licensing.html">Licensing</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/termsofuse.html">Terms of Use</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/privacy.html">Privacy</a> &nbsp;|&nbsp;
+<a href="http://developers.sun.com/global/trademarks.html">Trademarks</a>
+<br /><span class="sp10">&nbsp;</span><br />
+<br /><span class="sp10">&nbsp;</span><br />
+<!-- <span id="copyDate" class="cssDate"></span>--> &copy; 2010, Oracle Corporation and/or its affiliates
+</div></td>
+<td><img src="/im/a.gif" width="40" height="1" border="0" alt="" /></td>
+<td valign="top"><div class="footer"><b><a href="http://developers.sun.com/global/aboutsdn.html">A Sun Developer Network Site</a></b></div>
+<div class="footer">
+<img src="/im/a.gif" width="170" height="1" border="0" alt="" /><br />
+Unless otherwise licensed, code in all technical manuals herein (including articles, FAQs, samples) is provided under this <a href="http://developers.sun.com/global/berkeley_license.html">License</a>.
+<br /><span class="sp5">&nbsp;</span><br />
+<a href="http://developers.sun.com/global/rss_sdn.html"><img src="/im/ic_feed_16x.gif" width="16" height="16" align="top" border="0" alt="XML" /></a>&nbsp;<a href="http://developers.sun.com/global/content_feeds.html">Sun Developer RSS Feeds</a>
+</div></td></tr>
+<tr><td colspan="4" valign="top" class="grey3"><img src="/im/a.gif" width="1" height="2" border="0" alt="" /></td></tr>
+</table>
+</td></tr>
+</table>
+<!-- END VNV5 FOOTER -->
+</body>
+</html>
+
+
+
